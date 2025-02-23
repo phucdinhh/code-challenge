@@ -1,0 +1,9 @@
+1. lhsPriority is not defined in function, so it will cause error
+
+2. getPriority function is called multiple times for each balance in  sorting of sortedBalances.
+
+3. formattedBalances array is created but not used. Instead, sortedBalances array is used directly in rows.
+
+4. pices is listed in useMemo dependencies of sortedBalances but it is unnecessary because it could cause re-render frequently.
+
+5. blockchain property is used in the getPriority function has any type and not be defined in WalletBalance interface. This could lead to type errors.
